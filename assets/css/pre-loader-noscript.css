@@ -1,0 +1,12 @@
+/* Shown only when JavaScript is disabled — hide the pre-loader and reveal the page. */
+.pre-loader-1 {
+    display: none !important;
+}
+
+body.is-preloading {
+    overflow: visible;
+}
+
+body.is-preloading > :not(#pre-loader-1) {
+    visibility: visible;
+}
