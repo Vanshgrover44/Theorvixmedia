@@ -22422,3 +22422,21 @@ body {
   text-decoration: none;
   white-space: nowrap;
 }
+
+@media (max-width: 1024px) {
+  html,
+  body {
+    overflow-x: clip !important;
+    overscroll-behavior-x: auto !important;
+  }
+
+  #smooth-wrapper {
+    overflow: visible !important;
+    will-change: auto !important;
+  }
+
+  #smooth-content {
+    will-change: auto !important;
+    transform: none !important;
+  }
+}
