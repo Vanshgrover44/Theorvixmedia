@@ -1249,6 +1249,10 @@ void main() {
   function initGridDeform() {
     const nodes = document.querySelectorAll(".grid-deform");
     if (!nodes.length) return () => {
+      const isMobileOrTouch = window.matchMedia(
+  "(max-width: 1024px), (hover: none), (pointer: coarse)"
+).matches;
+if (isMobileOrTouch) return () => {};
     };
     if (isFileProtocol()) return () => {
     };
@@ -7817,6 +7821,7 @@ void main() {
   function initProject3() {
     const section = document.querySelector("[data-project-3]");
     if (!section) return;
+    if (window.matchMedia("(max-width: 1023.98px), (hover: none), (pointer: coarse)").matches) return;
     const pinRoot = section.querySelector(".project-3__pin");
     const stage = section.querySelector(".project-3__stage");
     const indexEl = section.querySelector(".project-3__index");
@@ -10291,6 +10296,7 @@ void main() {
     });
   }
   gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
+  ScrollTrigger.config({ ignoreMobileResize: true });
   window.gsap = gsap;
   window.ScrollTrigger = ScrollTrigger;
   window.ScrollSmoother = ScrollSmoother;
