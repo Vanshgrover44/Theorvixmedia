@@ -22462,3 +22462,81 @@ body {
   }
 
 }
+/* ===== MOBILE BLACK SCREEN FIX ===== */
+@media (max-width: 1024px) {
+
+  /* CTA section */
+  .cta-2 {
+    height: auto !important;
+    padding: 60px 0 0;
+    overflow: hidden;
+  }
+  .cta-2 > .container {
+    position: relative !important;
+    height: auto !important;
+    padding-inline: 16px;
+  }
+  .cta-2__copy {
+    position: static !important;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .cta-2__heading {
+    position: static !important;
+    translate: none !important;
+    font-size: 22px !important;
+    line-height: 1.25 !important;
+    white-space: normal !important;
+    text-align: center;
+    opacity: 1 !important;
+    top: auto !important;
+    bottom: auto !important;
+  }
+  .cta-2__stage {
+    position: relative !important;
+    height: 260px !important;
+    margin-top: 28px;
+  }
+
+  /* Our Platforms section */
+  .project-3__pin {
+    height: auto !important;
+    overflow: visible !important;
+  }
+  .project-3__images-wrap {
+    position: static !important;
+    transform: none !important;
+    width: 100% !important;
+  }
+  .project-3__images {
+    padding: 0 !important;
+    gap: 24px !important;
+    transform: none !important;
+  }
+  .project-3__image {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .project-3__index {
+    display: none !important;
+  }
+  .project-3__names {
+    position: static !important;
+    align-items: flex-start !important;
+    width: 100%;
+    margin-top: 32px;
+    gap: 24px;
+  }
+  .project-3__entry {
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+  .project-3__name {
+    color: var(--color-text-tertiary) !important;
+  }
+  .project-3__desc {
+    white-space: normal !important;
+    max-width: 100% !important;
+  }
+}
