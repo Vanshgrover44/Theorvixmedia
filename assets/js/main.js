@@ -9134,7 +9134,7 @@ void main() {
     });
   }
   function initCta2Titles() {
-    
+    if (window.matchMedia("(max-width: 1024px)").matches) return;
     const section = document.querySelector(".cta-2");
     const stage = section == null ? void 0 : section.querySelector(".cta-2__stage");
     const container = section == null ? void 0 : section.querySelector(":scope > .container");
