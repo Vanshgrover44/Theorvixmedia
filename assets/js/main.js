@@ -1247,10 +1247,77 @@ void main() {
     return source;
   }
   function initGridDeform() {
-    if (window.matchMedia("(max-width: 1024px), (hover: none), (pointer: coarse)").matches) return () => {};
     const nodes = document.querySelectorAll(".grid-deform");
-    if (!nodes.length) return () => {};
-    if (isFileProtocol()) return () => {};
+    if (!nodes.length) return () => {
+      const isMobileOrTouch = window.matchMedia(
+  "(max-width: 1024px), (hover: none), (pointer: coarse)"
+).matches;
+if (isMobileOrTouch) return () => {};
+    };
+    if (isFileProtocol()) return () => {
+    };
+    const prefersReducedMotion2 = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReducedMotion2) return () => {
+    };
+    const mounts = [];
+    nodes.forEach((node) => {
+      if (!(node instanceof HTMLElement)) return;
+      if (node.dataset.gridDeform === "manual") return;
+      const root = resolveRoot$1(node);
+      if (!root || root.dataset.gridDeformReady === "true") return;
+      const source = findSource$1(root);
+      if (!(source instanceof HTMLElement)) return;
+      const kind = sourceKind(source);
+      if (kind === "video" && isIOSWebKit()) return;
+      const options = optionsFromElement$1(root);
+      const idleAttr = root.getAttribute("data-grid-deform-idle");
+      const destroyWhenIdle = idleAttr !== "keep" && (idleAttr === "destroy" || nodes.length > 4);
+      root.classList.add(`grid-deform--${kind}`);
+      root.dataset.gridDeformReady = "true";
+      let instance = null;
+      const unmount = () => {
+        if (!instance) return;
+        instance.destroy();
+        instances$1.delete(root);
+        instance = null;
+      };
+      const mount = () => {
+        var _a;
+        if (instance) return;
+        try {
+          instance = new GridDeform(root, source, options);
+        } catch {
+          (_a = root.querySelector(".grid-deform__canvas")) == null ? void 0 : _a.remove();
+          return;
+        }
+        instances$1.set(root, instance);
+        root._gridDeform = instance;
+      };
+      const io = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            mount();
+            instance == null ? void 0 : instance.setPaused(false);
+            return;
+          }
+          if (destroyWhenIdle) {
+            unmount();
+            return;
+          }
+          instance == null ? void 0 : instance.setPaused(true);
+        },
+        { threshold: 0.05, rootMargin: "80px" }
+      );
+      whenTextMarkReady(root).then(() => io.observe(root));
+      mounts.push({ unmount, io });
+    });
+    return () => {
+      mounts.forEach(({ unmount, io }) => {
+        io.disconnect();
+        unmount();
+      });
+    };
+  }
   function whenTextMarkReady(root) {
     if (!root.classList.contains("text-mark") || root.classList.contains("is-mark-done")) {
       return Promise.resolve();
@@ -9067,7 +9134,7 @@ void main() {
     });
   }
   function initCta2Titles() {
-        if (window.matchMedia("(max-width: 1024px), (hover: none), (pointer: coarse)").matches) return;
+    
     const section = document.querySelector(".cta-2");
     const stage = section == null ? void 0 : section.querySelector(".cta-2__stage");
     const container = section == null ? void 0 : section.querySelector(":scope > .container");
