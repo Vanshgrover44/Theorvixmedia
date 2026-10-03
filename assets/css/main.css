@@ -22440,3 +22440,25 @@ body {
     transform: none !important;
   }
 }
+
+@media (max-width: 767px) {
+
+  .project-3__image-bg {
+    display: none !important;
+  }
+
+  .project-3__image-photo img {
+    will-change: auto !important;
+    transform: none !important;
+  }
+
+  .project-3__image {
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .project-3__images {
+    will-change: auto !important;
+  }
+
+}
