@@ -1225,4 +1225,17 @@ addEventListener("load",()=>ScrollTrigger.refresh(),{once:true});
   .footer-description,.footer-manifesto p{font-size:13px}
   .footer-join a,.footer-links a{font-size:13px}
 }
+
+/* FINAL MOBILE OVERFLOW SAFETY */
+html,body{width:100%;max-width:100%;overflow-x:hidden!important;}
+.footer{width:100%;max-width:100%;overflow:hidden!important;}
+.footer-word{max-width:100vw;white-space:nowrap;overflow:hidden;pointer-events:none;}
+@media(max-width:600px){
+  .footer-word{right:0!important;left:auto!important;font-size:24vw!important;line-height:.72!important;max-width:100vw!important;transform:none!important;}
+  .footer-word small{margin-right:6vw!important;}
+  .footer-main,.footer-links,.footer-bottom{max-width:100%;overflow:hidden;}
+}
+@media(max-width:380px){
+  .footer-word{font-size:22vw!important;}
+}
 </style>
