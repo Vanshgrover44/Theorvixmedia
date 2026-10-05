@@ -455,6 +455,12 @@
         <a href="mailto:Info@theorvixmedia.com">Info@theorvixmedia.com</a>
         <a href="tel:+919992363027">+91-9992363027</a>
       </div>
+      <div>
+        <span>POLICIES</span>
+        <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+        <a href="business-policy.html">Business Policy</a>
+        <a href="refund-policy.html">Refund Policy</a>
+      </div>
       <div class="footer-manifesto">
         <span>JOIN THE LIST</span>
         <p>Join the list for updates on digital media, publishing, design, technology, and creative work.</p>
@@ -694,7 +700,7 @@ details p{margin:0;padding:0 0 18px 45px;color:#7c7c76;font-size:11px;line-heigh
 .footer-join{display:flex;flex-direction:column;gap:9px;min-width:260px;padding-bottom:7px}
 .footer-join span,.footer-links>div>span{font-size:8px;letter-spacing:.12em;color:#666;margin-bottom:6px}
 .footer-join a{font-size:12px;color:#c0c0bb;transition:transform .3s ease,color .3s ease}.footer-join a:hover{color:#fff;transform:translateX(5px)}
-.footer-links{display:grid;grid-template-columns:repeat(4,1fr);gap:25px;border-top:1px solid var(--line-dark);border-bottom:1px solid var(--line-dark);padding:18px 0}
+.footer-links{display:grid;grid-template-columns:repeat(5,1fr);gap:25px;border-top:1px solid var(--line-dark);border-bottom:1px solid var(--line-dark);padding:18px 0}
 .footer-links>div{display:flex;flex-direction:column;gap:6px}
 .footer-links a{font-size:10px;color:#bdbdb7;transition:color .3s ease,transform .3s ease}.footer-links a:hover{color:#fff;transform:translateX(4px)}
 .footer-manifesto p{margin:0;color:#aaa;font-size:11px;line-height:1.45;letter-spacing:.04em}
@@ -819,6 +825,7 @@ details p{margin:0;padding:0 0 18px 45px;color:#7c7c76;font-size:11px;line-heigh
   .device-phone{width:9%;min-width:58px}
 }
 @media(max-width:600px){
+.footer-links{grid-template-columns:1fr}
   #webgl{opacity:.08}
   .site-header{height:62px;padding:0 16px}.logo-orvix{font-size:18px}.logo-media{font-size:9px}
   .panel-inner{padding:76px 16px 110px}
@@ -1204,6 +1211,7 @@ addEventListener("load",()=>ScrollTrigger.refresh(),{once:true});
 .footer-join a,.footer-links a{font-size:14px}
 
 @media(max-width:900px){
+.footer-links{grid-template-columns:repeat(2,1fr)}
   .desktop-nav{display:none}
   .site-header{height:74px}
   .site-logo .logo-orvix{font-size:25px}

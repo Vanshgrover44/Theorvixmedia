@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0a0f1f">
+<meta name="description" content="Business Policy - Orvix Media">
+<title>Business Policy — Orvix Media</title>
+<style>
+:root{
+  --black:#0a0f1f; --black-2:#121a31; --white:#f7f8ff;
+  --paper:#f5f1e8; --ink:#15182a; --muted:#68708a;
+  --line-light:rgba(21,24,42,.16); --line-dark:rgba(247,248,255,.18);
+  --accent:#7667f4; --teal:#8debd8; --red:#ff6b5e;
+  --ease:cubic-bezier(.16,1,.3,1); --pad:clamp(18px,4.8vw,76px);
+}
+*{box-sizing:border-box}
+html{background:var(--black);scroll-behavior:smooth}
+body{margin:0;background:linear-gradient(135deg,#090e1c 0%,#10182d 58%,#171d3c 100%);color:var(--white);font-family:Arial,Helvetica,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.035;z-index:20;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E")}
+a{color:inherit;text-decoration:none}
+.site-header{position:fixed;left:0;right:0;top:0;z-index:100;height:82px;padding:0 var(--pad);display:flex;align-items:center;justify-content:space-between;background:rgba(10,15,31,.82);border-bottom:1px solid rgba(118,103,244,.3);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+.site-logo{display:flex;align-items:baseline;gap:6px;font-weight:800;letter-spacing:-.065em}.logo-orvix{font-size:28px}.logo-media{font-size:15px;font-weight:400;letter-spacing:.02em;color:var(--teal)}
+.desktop-nav{display:flex;gap:24px;font-size:12px;letter-spacing:.05em;text-transform:uppercase}.desktop-nav a{opacity:.65;transition:.3s}.desktop-nav a:hover{opacity:1;color:var(--teal);transform:translateY(-2px)}
+.menu-btn{display:none;width:42px;height:42px;border:0;background:transparent;padding:8px;color:#fff}.menu-btn span{display:block;height:1px;background:currentColor;margin:7px 0}
+.mobile-menu{position:fixed;inset:0;z-index:900;background:#0a0f1f;color:#fff;transform:translateY(-101%);transition:transform .75s var(--ease);padding:92px 20px 30px;display:flex;flex-direction:column;justify-content:center}.mobile-menu.is-open{transform:translateY(0)}.mobile-menu a{font-size:clamp(34px,10vw,62px);line-height:.92;letter-spacing:-.06em;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.14);display:flex;justify-content:space-between}.mobile-menu i{font-style:normal;font-size:9px;opacity:.45}
+main{padding-top:82px}
+.policy-hero{min-height:58vh;padding:clamp(80px,10vw,150px) var(--pad) 70px;display:flex;align-items:flex-end;position:relative;overflow:hidden;border-bottom:1px solid var(--line-dark)}
+.policy-hero:after{content:"POLICY";position:absolute;right:-2vw;bottom:-8vw;font-size:clamp(180px,30vw,520px);line-height:.6;letter-spacing:-.12em;color:rgba(118,103,244,.07);pointer-events:none}
+.hero-kicker{font-size:11px;letter-spacing:.14em;color:var(--teal);font-weight:700;margin-bottom:18px}.hero-title{margin:0;max-width:1100px;font-size:clamp(58px,9vw,145px);line-height:.82;letter-spacing:-.08em}.hero-title em{font-style:normal;color:transparent;-webkit-text-stroke:1.5px var(--teal)}.hero-sub{max-width:650px;margin:28px 0 0;color:#cfd5e7;font-size:16px;line-height:1.7}
+.policy-section{background:linear-gradient(135deg,#f7f3eb 0%,#f2f5f2 55%,#edf0fb 100%);color:var(--ink);padding:80px var(--pad) 120px}
+.policy-layout{max-width:1200px;margin:auto;display:grid;grid-template-columns:260px minmax(0,1fr);gap:70px}
+.policy-index{position:sticky;top:110px;height:max-content;border-top:1px solid var(--line-light);padding-top:15px}.policy-index span{display:block;font-size:9px;letter-spacing:.12em;color:var(--muted);margin-bottom:13px;text-transform:uppercase}.policy-index a{display:block;font-size:12px;padding:8px 0;border-bottom:1px solid var(--line-light);color:#4e5670}.policy-index a:hover{color:var(--accent)}
+.policy-content h2{font-size:clamp(28px,3vw,48px);line-height:.95;letter-spacing:-.055em;margin:0 0 18px}.policy-content h3{font-size:21px;letter-spacing:-.025em;margin:42px 0 10px}.policy-content p,.policy-content li{font-size:15px;line-height:1.75;color:#4f5872}.policy-content p{margin:0 0 16px}.policy-content ul{padding-left:22px;margin:10px 0 22px}.policy-content li{margin:7px 0}.notice{border-left:3px solid var(--accent);background:rgba(118,103,244,.07);padding:18px 20px;margin:25px 0 30px}.notice p{margin:0;color:#343b55}
+.footer{background:linear-gradient(135deg,#090e1c 0%,#10182d 58%,#171d3c 100%);color:var(--white);padding:70px var(--pad) 30px;border-top:1px solid rgba(255,255,255,.12)}.footer-main{max-width:1200px;margin:auto;display:flex;justify-content:space-between;gap:50px;align-items:flex-end}.footer-title{margin:0;font-size:clamp(65px,10vw,160px);line-height:.76;letter-spacing:-.09em}.footer-title em{font-style:normal;color:#59627c}.footer-description{max-width:510px;color:#aeb6d0;font-size:14px;line-height:1.65;margin:25px 0 0}.footer-contact{display:flex;flex-direction:column;gap:9px;min-width:260px}.footer-contact small{font-size:9px;letter-spacing:.12em;color:#68708a}.footer-contact a{font-size:14px;color:#cfd5e7}.footer-contact a:hover{color:var(--teal)}.footer-links{max-width:1200px;margin:50px auto 0;padding:20px 0;border-top:1px solid var(--line-dark);border-bottom:1px solid var(--line-dark);display:flex;gap:35px;flex-wrap:wrap}.footer-links a{font-size:13px;color:#b9c0d3}.footer-links a:hover{color:#fff}.footer-bottom{max-width:1200px;margin:15px auto 0;color:#777f96;font-size:9px;letter-spacing:.1em;display:flex;justify-content:space-between}
+@media(max-width:900px){.desktop-nav{display:none}.menu-btn{display:block}.site-header{height:74px}main{padding-top:74px}.policy-layout{grid-template-columns:1fr;gap:30px}.policy-index{position:static}.policy-index nav{display:flex;flex-wrap:wrap;gap:7px}.policy-index a{padding:8px 10px;border:1px solid var(--line-light)}.footer-main{flex-direction:column;align-items:flex-start}}
+@media(max-width:600px){.site-header{height:62px;padding:0 16px}.logo-orvix{font-size:23px}.logo-media{font-size:13px}main{padding-top:62px}.policy-hero{min-height:52vh;padding:70px 16px 55px}.hero-title{font-size:clamp(48px,14.5vw,76px)}.hero-sub{font-size:14px;line-height:1.6}.policy-section{padding:55px 16px 80px}.policy-content h3{font-size:19px;margin-top:34px}.policy-content p,.policy-content li{font-size:13px;line-height:1.7}.footer{padding:55px 16px 25px}.footer-title{font-size:23vw}.footer-contact{min-width:0}.footer-links{margin-top:35px;gap:18px}.footer-bottom{font-size:8px}}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="index.html" class="site-logo" aria-label="Orvix Media home"><span class="logo-orvix">ORVIX</span><span class="logo-media">MEDIA</span></a>
+  <nav class="desktop-nav">
+    <a href="index.html">Home</a>
+    <a href="index.html#services">Services</a>
+    <a href="index.html#platforms">Platforms</a>
+    <a href="index.html#faq">FAQ</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+  <button class="menu-btn" type="button" aria-label="Open navigation" onclick="document.querySelector('.mobile-menu').classList.toggle('is-open')"><span></span><span></span></button>
+</header>
+<div class="mobile-menu">
+  <a href="index.html">Home <i>01</i></a>
+  <a href="index.html#services">Services <i>02</i></a>
+  <a href="index.html#platforms">Platforms <i>03</i></a>
+  <a href="index.html#faq">FAQ <i>04</i></a>
+  <a href="index.html#contact">Contact <i>05</i></a>
+</div>
+
+<main>
+<section class="policy-hero">
+  <div>
+    <div class="hero-kicker">ORVIX MEDIA / BUSINESS</div>
+    <h1 class="hero-title">BUSINESS<br><em>POLICY.</em></h1>
+    <p class="hero-sub">How Orvix Media structures service engagements, scope, payments, client responsibilities, delivery, approvals and digital publishing work.</p>
+  </div>
+</section>
+<section class="policy-section">
+  <div class="policy-layout">
+    <aside class="policy-index"><span>On this page</span><nav><a href="#s1">01 / Business Overview</a><a href="#s2">02 / Service Engagement</a><a href="#s3">03 / Scope of Work</a><a href="#s4">04 / Advance Payments</a><a href="#s5">05 / Client Responsibilities</a><a href="#s6">06 / Editorial & Media Services</a><a href="#s7">07 / Website & Technical Services</a><a href="#s8">08 / SEO Services</a><a href="#s9">09 / Design & Magazine Services</a><a href="#s10">10 / Communication & Approvals</a><a href="#s11">11 / Timelines</a><a href="#s12">12 / Ownership of Orvix Platforms</a><a href="#s13">13 / Digital-Only Business</a><a href="#s14">14 / Cancellation & Refunds</a><a href="#s15">15 / Changes to Business Policy</a><a href="#s16">16 / Contact</a></nav></aside>
+    <article class="policy-content">
+      <div class="notice"><p><strong>Last updated:</strong> 5 October 2026. This page is written for Orvix Media's digital services and should be read together with any project-specific quotation, invoice or written agreement.</p></div>
+      <section id="s1"><h3>1. Business Overview</h3><p>Orvix Media operates as a digital media and creative studio providing digital services to businesses, professionals, brands and organisations. Its service areas include websites, SEO, media coverage, editorial publishing, brand and creative design, magazine designing and digital marketing.</p></section>
+<section id="s2"><h3>2. Service Engagement</h3><p>Projects normally begin after the requirements, scope, deliverables, estimated timeline and commercial terms are discussed and accepted. The exact process may vary by service. Work can be handled as a standalone project or as part of a broader digital engagement.</p></section>
+<section id="s3"><h3>3. Scope of Work</h3><p>Only the deliverables specifically included in the agreed scope are covered by the project fee. Requests that materially change the original scope, add new pages or functionality, require new concepts, or introduce additional services may require a revised quotation or additional fee.</p></section>
+<section id="s4"><h3>4. Advance Payments</h3><p>All Orvix Media services are provided on an advance-payment basis unless a different written arrangement is expressly agreed with the client. Payment is required before the relevant service work is undertaken. After payment, the service is delivered after the applicable work, production, editorial preparation, design, development or other agreed process is completed. The normal service timeline is approximately <strong>two weeks</strong>, but some cases may take <strong>two weeks or longer</strong> depending on the service, scope, client responses, approvals, corrections, required information or other project-specific circumstances. Orvix Media does not guarantee a fixed delivery date unless a specific date has been expressly confirmed in writing. Any indicative timeline is an estimate and not a guaranteed completion date.</p></section>
+<section id="s5"><h3>5. Client Responsibilities</h3><p>Clients should provide complete and accurate information, required assets, approvals and feedback within a reasonable time. Delays in receiving information, approvals, credentials or materials may affect the project timeline. Orvix Media is not responsible for delays caused by unavailable or incomplete client inputs.</p></section>
+<section id="s6"><h3>6. Editorial & Media Services</h3><p>For media and editorial projects, Orvix Media may transform supplied professional or company information into an editorial feature, profile, recognition story or magazine presentation. Clients should review important factual information before finalisation. Publication and placement are handled according to the agreed service and platform.</p></section>
+<section id="s7"><h3>7. Website & Technical Services</h3><p>Website projects may include planning, UI direction, responsive development, WordPress/CMS implementation, forms, integrations, optimisation, testing and launch support. Hosting, domain, premium plugin, software, API and third-party costs are separate unless expressly included in the quotation.</p></section>
+<section id="s8"><h3>8. SEO Services</h3><p>SEO work is based on reasonable optimisation practices and an agreed scope. Search engines make independent decisions about crawling, indexing and ranking. Accordingly, Orvix Media does not promise a specific ranking position, traffic level, lead volume or revenue result.</p></section>
+<section id="s9"><h3>9. Design & Magazine Services</h3><p>Design projects may include visual identity, logos, creative assets, magazine covers, editorial layouts and digital publication-ready files. Final dimensions, page count, file formats and revision limits should be agreed before production. A change in approved direction may be treated as additional work.</p></section>
+<section id="s10"><h3>10. Communication & Approvals</h3><p>Email, WhatsApp or other agreed communication channels may be used for project coordination. Client approvals may be treated as confirmation to proceed with the approved direction. Clients should communicate corrections before final publication or delivery wherever possible.</p></section>
+<section id="s11"><h3>11. Timelines</h3><p>Project timelines are estimates based on the agreed scope and timely client cooperation. Timelines may change because of delayed feedback, additional revisions, missing assets, third-party dependencies, technical issues or changes requested by the client.</p></section>
+<section id="s12"><h3>12. Ownership of Orvix Platforms</h3><p>The website states that TheCEOVerse, TheExecutiveTimes and InsightForgeMedia are owned and operated by Orvix Media. Services offered through those platforms are handled by Orvix Media and payments for those services are collected directly by Orvix Media.</p></section>
+<section id="s13"><h3>13. Digital-Only Business</h3><p>All services supplied by Orvix Media are digital/electronic services. No physical goods are supplied. Delivery is therefore normally completed electronically through digital files, websites, online publications, email, cloud links or other digital methods.</p></section>
+<section id="s14"><h3>14. Cancellation & Refunds</h3><p>A client may request cancellation within seven (7) days of making the payment. If an eligible cancellation request is received within this period, the maximum refund available will be 50% of the amount paid. After the seven-day cancellation period, the payment is non-refundable, even if the service is still in progress or has not yet been delivered. Once a service has been completed, delivered, published, substantially performed or otherwise processed, it is non-refundable. Refunds, where eligible, are subject to verification and the payment method used.</p></section>
+<section id="s15"><h3>15. Changes to Business Policy</h3><p>Orvix Media may update this Business Policy when its services, processes or operating requirements change. The current version published on this website will apply to future engagements, while an agreed project may remain subject to the terms accepted for that project.</p></section>
+<section id="s15a"><h3>15A. Delivery Dates & Independent Service Relationship</h3>
+<p>Orvix Media does not provide or guarantee a fixed delivery date unless it has expressly confirmed that date in writing. Standard service completion is generally around two weeks, while some projects may require two weeks or longer.</p>
+<p>Client response time, approvals, corrections, missing information, assets, credentials and other client-side dependencies can affect the timeline. Orvix Media operates as an independent service provider and does not create an employment, agency, partnership, franchise or joint-venture relationship with a client or third party unless expressly agreed in writing.</p></section>
+<section id="s16"><h3>16. Contact</h3><p>Business, service, cancellation, refund and privacy-related questions can be sent to Info@theorvixmedia.com or +91-9992363027. Orvix Media is based in Rohtak, Haryana, India.</p></section>
+
+    </article>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="footer-main">
+    <div>
+      <p class="hero-kicker">ORVIX MEDIA</p>
+      <h2 class="footer-title">ORVIX<br><em>MEDIA.</em></h2>
+      <p class="footer-description">From websites and branding to media, publishing, SEO, and digital marketing, we build digital experiences that help brands move forward.</p>
+    </div>
+    <div class="footer-contact">
+      <small>CONTACT</small>
+      <a href="mailto:Info@theorvixmedia.com">Info@theorvixmedia.com ↗</a>
+      <a href="tel:+919992363027">+91-9992363027 ↗</a>
+      <small>WE ARE HERE</small>
+      <span>Rohtak, Haryana, India</span>
+    </div>
+  </div>
+  <div class="footer-links">
+    <a href="terms-and-conditions.html">Terms & Conditions</a>
+    <a href="business-policy.html">Business Policy</a>
+    <a href="refund-policy.html">Refund Policy</a>
+    <a href="index.html">Orvix Media</a>
+    <a href="https://theceoverse.com" target="_blank" rel="noopener">TheCEOVerse ↗</a>
+    <a href="https://theexecutivetimes.com" target="_blank" rel="noopener">TheExecutiveTimes ↗</a>
+    <a href="https://insightforgemedia.in" target="_blank" rel="noopener">InsightForgeMedia ↗</a>
+  </div>
+  <div class="footer-bottom"><span>© 2026 ORVIX MEDIA</span><span>DIGITAL MEDIA & CREATIVE STUDIO</span></div>
+</footer>
+
+<script>
+document.querySelectorAll('.mobile-menu a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.mobile-menu').classList.remove('is-open')));
+</script>
+</body>
+</html>
